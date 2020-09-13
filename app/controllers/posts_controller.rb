@@ -5,6 +5,7 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
+    @author = @post.author # allows the show.html.erb to have access to the @author instance var from @post
   end
 
   def new
